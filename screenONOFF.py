@@ -5,7 +5,7 @@ Created on Thu Jan 26 10:25:15 2017
 
 @author: kasperipalkama
 """
-
+# visualizes phone screen ON/OFF -data
 import pandas as pd
 import datetime, pytz
 import matplotlib.dates as dates
