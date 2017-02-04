@@ -5,7 +5,7 @@ Created on Thu Jan 26 12:47:56 2017
 
 @author: kasperipalkama
 """
-
+# Filters and visualizes hearth rate data
 import pandas as pd
 from screenONOFF import preprocess_time
 import matplotlib.pyplot as plt
