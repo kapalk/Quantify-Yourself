@@ -5,7 +5,7 @@ Created on Sat Jan 14 11:43:18 2017
 
 @author: kasperipalkama
 """
-# records outside light intensity values from weather stations website
+
 from bs4 import BeautifulSoup
 import urllib
 import csv
@@ -54,4 +54,4 @@ if __name__ == "__main__":
         writeToLog(dir_path+'/logfile.csv',time_and_intensity)
         if is_interrupted:
             break
-        time.sleep(600)
+        time.sleep(10)
