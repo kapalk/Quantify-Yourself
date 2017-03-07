@@ -8,7 +8,7 @@ Created on Thu Jan 26 12:47:56 2017
 
 import pandas as pd
 from screenONOFF import preprocess_time
-import matplotlib.pyplot as plt
+from matplotlib import style,pyplot as plt
 import numpy as np
 from scipy.signal import find_peaks_cwt, medfilt
 
@@ -27,6 +27,7 @@ def count_peaks(var,width):
     return peak_list
 
 def visualize(x,y,legend = '',xlabel='',ylabel='',mark='-',linewidth = 1):
+    style.use('ggplot')
     plt.figure(1)
     plt.plot(x,y,mark,linewidth = linewidth,label = legend)
     plt.xlabel(xlabel)
@@ -43,9 +44,7 @@ if __name__ == "__main__":
     new_df = preprocess_rr(new_df)
 #    hr_peaks = np.array(count_peaks(new_df['hr'],width=3600))
 #    rr_peaks = np.array(count_peaks(new_df['rr'],width=3600))
-    for var,leg,peak_list in zip(
-            ['hr','rr'],[['hr','hr filtered'],
-             ['rr','rr filtered']],[rr_peaks,hr_peaks]):
+    for var,leg in zip(['hr','rr'],[['hr','hr filtered'],['rr','rr filtered']],):
         visualize(x=df['time'],y=df[var],xlabel='daytime',
                   ylabel='1/min',legend=leg[0])
         visualize(x=new_df['time'],y=new_df[var],linewidth=3,legend=leg[1])

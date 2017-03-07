@@ -13,6 +13,7 @@ import time
 import signal
 import sys
 import os
+from datetime import datetime
 
 def signal_handler(signal, frame):
     global is_interrupted
@@ -29,15 +30,13 @@ def preprocess(texts):
     timestamp = list_of_variables[0] +" "+ list_of_variables[1]
     timestamp = timestamp.replace(":","")
     timeStampStruct = time.strptime(timestamp, '%Y-%m-%d %H.%M.%S')
-    newTimeStamp = str(str(timeStampStruct.tm_year)+"-"+
-                       str(timeStampStruct.tm_mon)+"-"+
-                          str(timeStampStruct.tm_yday)+" "+
-                          str(timeStampStruct.tm_hour)+":"+
-                          str(timeStampStruct.tm_min)+":"+
-                             str(timeStampStruct.tm_sec))
+    newTimeStamp = datetime(timeStampStruct[0],timeStampStruct[1],
+                            timeStampStruct[2],timeStampStruct[3],
+                                           timeStampStruct[4],
+                                                          timeStampStruct[5])
     time_and_intensity = [newTimeStamp, list_of_variables[8],\
                           list_of_variables[9].replace("\n","")]
-    return time_and_intensity,timeStampStruct
+    return time_and_intensity
 
 def writeToLog(path,data):
     with open(path, 'a',newline = '') as f:
@@ -50,8 +49,8 @@ if __name__ == "__main__":
     dir_path = os.path.dirname(os.path.realpath(__file__))
     while True:
         data = getHTMLasString('http://outside.aalto.fi/current.txt')
-        time_and_intensity,struct = preprocess(data)
+        time_and_intensity = preprocess(data)
         writeToLog(dir_path+'/logfile.csv',time_and_intensity)
         if is_interrupted:
             break
-        time.sleep(10)
+        time.sleep(600)

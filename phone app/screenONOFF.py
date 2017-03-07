@@ -9,7 +9,7 @@ Created on Thu Jan 26 10:25:15 2017
 import pandas as pd
 import datetime, pytz
 import matplotlib.dates as dates
-from matplotlib import pyplot as plt
+from matplotlib import style,pyplot as plt
 import numpy as np
 
 
@@ -25,6 +25,7 @@ def preprocess_time(df):
     return df
 
 def visualize_screen_OnOFF(df,xlabel,ylabel):
+    style.use('ggplot')
     plt.figure()    
     plt.step(df['time'],df['onoff'])
     plt.xlabel('Daytime')
