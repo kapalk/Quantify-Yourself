@@ -22,7 +22,6 @@ def preprocess_time(df):
         timestamp = datetime.datetime.strptime(timestamp,'%Y-%m-%d %H:%M:%S')
         timestamps.append(timestamp)
     df['time'] = np.array(timestamps)
-    print(timestamps)
     return df
 
 def visualize_screen_OnOFF(df,xlabel,ylabel):
