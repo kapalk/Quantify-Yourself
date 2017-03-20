@@ -6,9 +6,15 @@ Created on Thu Jan 26 12:47:56 2017
 @author: kasperipalkama
 """
 
-import pandas as pd
+
 import sys, os
-sys.path.insert(0, os.path.abspath("screenONOFF.py"))
+
+currentDir = os.getcwd()
+phone_app_path = currentDir[::-1][10:][::-1] + 'phone_app/'
+if phone_app_path not in sys.path:
+    sys.path.append(phone_app_path)
+
+import pandas as pd   
 from screenONOFF import preprocess_time
 from matplotlib import style,pyplot as plt
 import numpy as np
@@ -45,7 +51,6 @@ if __name__ == "__main__":
     new_df = df.copy()
     new_df = preprocess_hr(new_df)
     new_df = preprocess_rr(new_df)
-    new_df = preprocess_hrv(new_df)
 #    hr_peaks = np.array(count_peaks(new_df['hr'],width=3600))
 #    rr_peaks = np.array(count_peaks(new_df['rr'],width=3600))
     for var,leg in zip(['hr','rr'],[['hr','hr filtered'],['rr','rr filtered']],):
