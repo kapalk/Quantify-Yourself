@@ -18,10 +18,11 @@ def preprocess_time(df):
     for ts in df['time']:
         timestamp = datetime.datetime.fromtimestamp(ts,pytz.\
                                                     timezone('Europe/Helsinki')).\
-                                                   strftime('%Y-%m-%d %H:%M:%S')
+                                                   strftime('%Y-%m-%d %H:%M:%S')                                         
         timestamp = datetime.datetime.strptime(timestamp,'%Y-%m-%d %H:%M:%S')
         timestamps.append(timestamp)
     df['time'] = np.array(timestamps)
+    print(timestamps)
     return df
 
 def visualize_screen_OnOFF(df,xlabel,ylabel):
