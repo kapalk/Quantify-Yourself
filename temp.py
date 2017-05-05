@@ -15,13 +15,19 @@ master = pd.read_csv('alldata.csv')
 y = master['peak_count']
 X = master.drop('peak_count', 1)
 
-print(np.mean(y))
-print(np.unique(np.round(y)))
-print(np.median(y))
-plt.hist(y)
+y = np.array(y)
 
+mu = np.mean(y)
+sigma = np.std(y)
+count, bins, ignored = plt.hist(y, 10, normed=True)
+plt.plot(bins, 1/(sigma * np.sqrt(2 * np.pi)) * np.exp( - (bins - mu)**2 / (2 * sigma**2) ), linewidth=2, color='r')
+plt.title('Peak Count distribution')
+plt.show()
 
-#sys.exit()
+###
+sys.exit()
+###
+
 X = X.drop('t',1)
 
 plt.hist(y)
