@@ -14,6 +14,8 @@ Under `bed_sensor/`:
 - `sleepQuality.py`: determines a value to describe sleep quality from rolling standard deviation of respiration rate
 
 # Scripts
-- `outside_light_intensity_reader.py`: reads outside light intensity from outside.aalto.fi
-- `outside-light-intensity-preprocess.py`: preprocessing of the light intensity data
+- `outside_light_intensity_reader.py`: reads outside light intensity from outside.aalto.fi .
+- `outside-light-intensity-preprocess.py`: preprocessing of the light intensity data.
 - `surveyHandling.py`: reorganizes survey data. The output is dictionary where subjects are keys and values are pandas dataframes which columns are answers from user-defined questions and index is datetime.
+- `combineData.py`: combiness sensor, survey and light intensity data.
+- `FAMD.r`: FAMD for our combined data.
