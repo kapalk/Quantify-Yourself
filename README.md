@@ -5,7 +5,6 @@ The goal of the project was to investigate different factors which affect sleep 
 
 Under `bed_sensor/`:
 
-- `input_data/`: data for testing code
 - `preprocessing.py`: separates nights according to survey answers and 
                       separates subjects. final results is python dictionary 
                       where subjects are keys and values are lists of nights.
