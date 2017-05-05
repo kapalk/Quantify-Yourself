@@ -1,5 +1,5 @@
 # Quantify-yourself-project
-The goal of the project was to investigate different factors which affect sleep quality. In addition, a goal was to create a novel measurement for sleep quality. Unfortunately the data used in this study cannot be shared because of privacy reasons
+The aim of the project was to investigate different factors which affect sleep quality. In addition, the aim was to create a novel measurement for sleep quality. Unfortunately the data used in this study cannot be shared because of privacy reasons
 
 # Directories
 
