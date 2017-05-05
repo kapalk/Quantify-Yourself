@@ -12,9 +12,10 @@ Under `bed_sensor/`:
                       and its rolling sd. This dictionary is saved as pickle dump.
 - `rrPreprocess.py`: preprocess respiration rate
 - `sleepQuality.py`: determines a value to describe sleep quality from rolling standard deviation of respiration rate
+
 Under `figs/`:
 
-Results of the FAMD for each individual
+- Results of the FAMD for each individual
 
 # Scripts
 - `outside_light_intensity_reader.py`: reads outside light intensity from outside.aalto.fi .
