@@ -1,7 +1,7 @@
 # Quantify-yourself-project
 The aim of the project was to investigate different factors which affect sleep quality. In addition, the aim was to create a novel measurement for sleep quality. Results showed that the measured variables had highly individual effects on sleep quality. Despite this our classifier model was quite successful in classifying sleep quality. This shows that our measure for sleep quality (peak count) correlates with subjective evaluations
 
-Unfortunately the data used in this study cannot be shared because of privacy reasons
+Unfortunately the original data used in this study cannot be shared due to privacy reasons
 
 # Directories
 
