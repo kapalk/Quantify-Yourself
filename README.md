@@ -1,5 +1,7 @@
 # Quantify-yourself-project
-The aim of the project was to investigate different factors which affect sleep quality. In addition, the aim was to create a novel measurement for sleep quality. Unfortunately the data used in this study cannot be shared because of privacy reasons
+The aim of the project was to investigate different factors which affect sleep quality. In addition, the aim was to create a novel measurement for sleep quality. Results showed that the measured variables had highly individual effects on sleep quality. Despite this our classifier model was quite successful in classifying sleep quality. This shows that our measure for sleep quality (peak count) correlates with subjective evaluations
+
+Unfortunately the data used in this study cannot be shared because of privacy reasons
 
 # Directories
 
@@ -15,7 +17,15 @@ Under `bed_sensor/`:
 
 Under `figs/`:
 
-- Results of the FAMD for each individual
+- Results of the FAMD for each individual and visualization of peak_counts
+
+Under `classifying/`:
+
+- `alldata.csv`: learning data
+- `featureSelection.py`: feature selection for classifying
+- `LogisticRegression`: logistic regression
+- `temp.py:` visualization of peak count
+
 
 # Scripts
 - `outside_light_intensity_reader.py`: reads outside light intensity from outside.aalto.fi .
