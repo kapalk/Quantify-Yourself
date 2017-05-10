@@ -1,7 +1,7 @@
 # Quantify-yourself-project
-The aim of the project was to investigate different factors which affect sleep quality. In addition, the aim was to create a novel measurement for sleep quality. Results showed that the measured variables had highly individual effects on sleep quality. Despite this our classifier model was quite successful in classifying sleep quality. This shows that our measure for sleep quality (peak count) correlates with subjective evaluations
+The aim of the project was to investigate different factors which affect sleep quality. In addition, the aim was to create a novel measurement for sleep quality. Results showed that the measured variables had highly individual effects on sleep quality. Despite this our classifier model was quite successful in classifying sleep quality. This shows that our measure for sleep quality (peak count) correlates with subjective evaluations.
 
-Unfortunately the original data used in this study cannot be shared due to privacy reasons
+Unfortunately the original data used in this study cannot be shared due to privacy reasons.
 
 # Directories
 
@@ -32,4 +32,4 @@ Under `classifying/`:
 - `outside-light-intensity-preprocess.py`: preprocessing of the light intensity data.
 - `surveyHandling.py`: reorganizes survey data. The output is dictionary where subjects are keys and values are pandas dataframes which columns are answers from user-defined questions and index is datetime.
 - `combineData.py`: combiness sensor, survey and light intensity data.
-- `FAMD.r`: FAMD for our combined data.
+- `FAMD.r`: FAMD for each each subject.
